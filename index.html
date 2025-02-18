@@ -1,99 +1,83 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studienteilnahme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #002244;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="de"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Studienteilnahme&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #003366;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #002244;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.error {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: red;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Willkommen zur Studie&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Bitte gib dein Geburtsdatum (Tag und Monat) ein, um zur richtigen Umfrage geleitet zu werden.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label for="birthday"&gt;Geburtstag (TT/MM):&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="birthday" placeholder="z. B. 15/06"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="redirectUser()"&gt;Weiter&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="error-message" class="error"&gt;&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function redirectUser() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var input = document.getElementById("birthday").value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var errorMessage = document.getElementById("error-message");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Prüfen, ob das Format korrekt ist (TT/MM)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var regex = /^(\d{1,2})\/(\d{1,2})$/;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var match = input.match(regex);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!match) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>errorMessage.textContent = "Bitte gib dein Geburtsdatum im Format TT/MM ein (z. B. 15/06).";</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>var day = parseInt(match[1]);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Prüfen, ob der Tag im Bereich 1-31 liegt</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (day &lt; 1 || day &gt; 31) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>errorMessage.textContent = "Bitte gib einen gültigen Tag zwischen 1 und 31 ein.";</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// URLs für die SoSci Survey-Umfragen (ANPASSEN!)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var urlGerade = "https://www.soscisurvey.de/Studie/?q=Gruppe1";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var urlUngerade = "https://www.soscisurvey.de/Studie/?q=Gruppe2";</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Weiterleitung basierend auf dem Geburtstag</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (day % 2 === 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>window.location.href = urlGerade;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>window.location.href = urlUngerade;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+    <h2>Willkommen zur Studie</h2>
+    <p>Bitte gib dein Geburtsdatum (Tag und Monat) ein, um zur richtigen Umfrage geleitet zu werden.</p>
+
+    <label for="birthday">Geburtstag (TT/MM):</label>
+    <input type="text" id="birthday" placeholder="z. B. 15/06">
+    <br>
+    <button onclick="redirectUser()">Weiter</button>
+    <p id="error-message" class="error"></p>
+
+    <script>
+        function redirectUser() {
+            var input = document.getElementById("birthday").value;
+            var errorMessage = document.getElementById("error-message");
+
+            // Prüfen, ob das Format korrekt ist (TT/MM)
+            var regex = /^(\d{1,2})\/(\d{1,2})$/;
+            var match = input.match(regex);
+
+            if (!match) {
+                errorMessage.textContent = "Bitte gib dein Geburtsdatum im Format TT/MM ein (z. B. 15/06).";
+                return;
+            }
+
+            var day = parseInt(match[1]);
+
+            // Prüfen, ob der Tag im Bereich 1-31 liegt
+            if (day < 1 || day > 31) {
+                errorMessage.textContent = "Bitte gib einen gültigen Tag zwischen 1 und 31 ein.";
+                return;
+            }
+
+            // URLs für die SoSci Survey-Umfragen (ANPASSEN!)
+            var urlGerade = "https://www.soscisurvey.de/Studie/?q=Gruppe1";
+            var urlUngerade = "https://www.soscisurvey.de/Studie/?q=Gruppe2";
+
+            // Weiterleitung basierend auf dem Geburtstag
+            if (day % 2 === 0) {
+                window.location.href = urlGerade;
+            } else {
+                window.location.href = urlUngerade;
+            }
+        }
+    </script>
+
 </body>
 </html>
